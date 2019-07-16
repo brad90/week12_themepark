@@ -8,10 +8,12 @@ import themePark.ITicketed;
 public class Dodgems extends Attraction implements ISecurity, IReview, ITicketed {
 
     private double price;
+    private int rating;
 
     public Dodgems(String type, int price){
         super(type);
         this.price = price;
+        this.rating = rating;
     }
 
 
@@ -25,8 +27,13 @@ public class Dodgems extends Attraction implements ISecurity, IReview, ITicketed
     }
 
     public int getRating(){
-        return 4;
+        return rating;
     }
+
+    public void setRating(int setRating){
+        this.rating = setRating;
+    }
+
 
    public double defaultPrice(){
         return this.price;

@@ -6,8 +6,11 @@ import themePark.ISecurity;
 
 public class IceCreamStall extends Stall implements ISecurity, IReview {
 
+    private int rating;
+
     public IceCreamStall(String name, String owner){
         super(name,owner);
+        this.rating = rating;
     }
 
     public Boolean isVisitorAllowedToUseService(Visitor visitor){
@@ -15,7 +18,11 @@ public class IceCreamStall extends Stall implements ISecurity, IReview {
     }
 
     public int getRating(){
-        return 1;
+        return rating;
+    }
+
+    public void setRating(int userRating){
+        this.rating = userRating;
     }
 
     public String getName(){

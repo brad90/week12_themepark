@@ -9,10 +9,12 @@ public class RollerCoaster extends Attraction implements ISecurity, IReview,ITic
 
 
     private double price;
+    private int rating;
 
     public RollerCoaster(String type, double price){
         super(type);
         this.price = price;
+        this.rating = rating;
     }
 
     @Override
@@ -25,8 +27,13 @@ public class RollerCoaster extends Attraction implements ISecurity, IReview,ITic
     }
 
     public int getRating(){
-        return 1;
+        return this.rating;
     }
+
+    public void setRating(int setRating){
+        this.rating = setRating;
+    }
+
 
     public double defaultPrice(){
         return this.price;

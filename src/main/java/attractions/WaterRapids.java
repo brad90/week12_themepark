@@ -8,10 +8,12 @@ import themePark.ITicketed;
 public class WaterRapids extends Attraction implements ISecurity, IReview, ITicketed {
 
     private double price;
+    private int rating;
 
     public WaterRapids(String type, double price){
         super(type);
         this.price = price;
+        this.rating = rating;
     }
 
     @Override
@@ -24,7 +26,11 @@ public class WaterRapids extends Attraction implements ISecurity, IReview, ITick
     }
 
     public int getRating(){
-        return 1;
+        return this.rating;
+    }
+
+    public void setRating(int setRating){
+        this.rating = setRating;
     }
 
 

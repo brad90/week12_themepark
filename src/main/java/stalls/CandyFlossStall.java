@@ -6,8 +6,11 @@ import themePark.ISecurity;
 
 public class CandyFlossStall extends Stall implements ISecurity, IReview {
 
+    private int rating;
+
     public CandyFlossStall(String name, String owner){
         super(name,owner);
+        this.rating = rating;
     }
 
     public Boolean isVisitorAllowedToUseService(Visitor visitor){
@@ -15,7 +18,11 @@ public class CandyFlossStall extends Stall implements ISecurity, IReview {
     }
 
     public int getRating(){
-        return 1;
+        return this.rating;
+    }
+
+    public void setRating(int userRating){
+        this.rating = userRating;
     }
 
     public String getName(){
